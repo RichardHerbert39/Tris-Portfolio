@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+.main {
+	display: flex;
+	background-color: #000000;
+}
+
+#type-out {
+	font-size: 2rem;
+	color: #00ff00;
+}
+
+.blinking {
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+	0% {opacity: 1;}
+	49% {opacity: 1;}
+	50% {opacity: 0;}
+	99% {opacity: 0;}
+	100% {opacity: 1;}
+}
