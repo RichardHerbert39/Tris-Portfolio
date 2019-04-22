@@ -1,3 +1,4 @@
+//typewriter effect
 // set up text to print, each item in array is new line
 var aText =
 	["Tristan Perkins", 
@@ -33,5 +34,22 @@ function typewriter() {
 	}
 }
 
-
 typewriter();
+
+//nav button logic
+var navbutton = document.getElementById("navbutton"),
+	navlist = document.getElementById("navlist"),
+	shown = false;
+
+function navshow() {
+	if (shown == false) {
+		navlist.style.display = "block";
+		shown = true;
+	}
+	else {
+		navlist.style.display = "none";
+		shown = false;
+	}
+}
+
+navbutton.addEventListener("click", navshow);
