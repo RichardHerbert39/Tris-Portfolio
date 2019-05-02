@@ -141,8 +141,14 @@ nav ul {
 	
 	.about-image {
 		float: right;
-		max-width: 50%;
+		max-width: 450px;
 		left: 0;
 		margin: 20px;
+	}
+}
+
+@media (min-width: 1125px) {
+	.about-image {
+		max-width: 50%;
 	}
 }
