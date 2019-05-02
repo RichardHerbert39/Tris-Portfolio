@@ -15,22 +15,24 @@ function typewriter() {
 	sContents =  '';
 	iRow = Math.max(0, iIndex-iScrollAt);
 	var destination = document.getElementById("type-out");
-
-	while ( iRow < iIndex ) {
-		sContents += aText[iRow++] + '<br />';
-	}
-	destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "<span class='blinking'>_</span>";
-	if ( iTextPos++ == iArrLength ) {
-		iTextPos = 0;
-		iIndex++;
-		if ( iIndex != aText.length ) {
-			iArrLength = aText[iIndex].length;
-			setTimeout("typewriter()", 500);
+	
+	if (destination != null) {
+		while ( iRow < iIndex ) {
+			sContents += aText[iRow++] + '<br />';
 		}
-	}
-	else {
-		iSpeed = Math.floor(Math.random() * 201) + 100;
-		setTimeout("typewriter()", iSpeed);
+		destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "<span class='blinking'>_</span>";
+		if ( iTextPos++ == iArrLength ) {
+			iTextPos = 0;
+			iIndex++;
+			if ( iIndex != aText.length ) {
+				iArrLength = aText[iIndex].length;
+				setTimeout("typewriter()", 500);
+			}
+		}
+		else {
+			iSpeed = Math.floor(Math.random() * 201) + 50;
+			setTimeout("typewriter()", iSpeed);
+		}
 	}
 }
 
@@ -43,7 +45,7 @@ var navbutton = document.getElementById("navbutton"),
 
 function navshow() {
 	if (shown == false) {
-		navlist.style.display = "block";
+		navlist.style.display = "inline-block";
 		shown = true;
 	}
 	else {
