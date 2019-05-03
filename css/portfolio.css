@@ -1,3 +1,11 @@
+:root {
+	--terminal-green: #00c200;
+	--terminal-blue: #4753ff;
+	--terminal-red: #ff4529;
+	--terminal-black: #242424;
+	--terminal-grey: #2b2b2b;
+}
+
 * {
 	box-sizing: border-box;
 	font-family: 'Share Tech Mono', monospace;
@@ -5,11 +13,12 @@
 
 body {
 	margin: 0;
+	background-color: var(--terminal-black)
 }
 
 #navbutton {
 	position: absolute;
-	background-color: #000000;
+	background-color: var(--terminal-grey);
 	border: none;
 	top: 5px;
 	right: 5px;
@@ -23,11 +32,11 @@ body {
 	height: 4px;
 	width: 30px;
 	margin: 6px;
-	background-color: #00ff00;
+	background-color: var(--terminal-red);
 }
 
 nav {
-	background-color: #000000;
+	background-color: var(--terminal-grey);
 	width: 100%;
 	min-height: 50px;
 	position: sticky;
@@ -49,7 +58,7 @@ nav ul {
 
 #navlist li a {
 	font-size: 1.2rem;
-	color: #00ff00;
+	color: var(--terminal-red);
 	text-decoration: none;
 }
 
@@ -58,7 +67,7 @@ nav ul {
 	top: 3px;
 	left: 3px;
 	font-size: 1.2rem;
-	color: #00ff00;
+	color: var(--terminal-blue);
 }
 
 .blinking {
@@ -88,8 +97,8 @@ nav ul {
 
 .main-content {
 	padding: 10px;
-	color: #00ff00;
-	background-color: #000000;
+	color: var(--terminal-green);
+	background-color: var(--terminal-black);
 }
 
 @media (min-width: 768px) {
@@ -136,7 +145,7 @@ nav ul {
 		top: 70px;
 		width: 80%;
 		left: 10%;
-		background-color: #000000;
+		background-color: var(--terminal-black);
 	}
 	
 	.about-image {
