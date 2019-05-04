@@ -1,7 +1,7 @@
 // set up text to print, each item in array is new line
 var aText =
 	["Tristan Perkins", 
-	"Back End Developer"],
+	"Software Developer"],
 	iSpeed = 150, // time delay of print out
 	iIndex = 0, // start printing array at this posision
 	iArrLength = aText[0].length, // the length of the text array
