@@ -101,6 +101,17 @@ nav ul {
 	background-color: var(--terminal-black);
 }
 
+.contact-list {
+	list-style: none;
+	color:var(--terminal-green);
+}
+
+.contact-link {
+	text-decoration: none;
+	color: var(--terminal-green);
+	float: right;
+}
+
 @media (min-width: 768px) {
 	nav {
 		display: flex;
