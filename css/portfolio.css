@@ -112,6 +112,21 @@ nav ul {
 	float: right;
 }
 
+.flex {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-around;
+}
+
+.project {
+	width: 90%;
+	margin-bottom: 20px;
+}
+
+.project img {
+	max-width: 100%;
+}
+
 @media (min-width: 768px) {
 	nav {
 		display: flex;
@@ -164,6 +179,10 @@ nav ul {
 		max-width: 450px;
 		left: 0;
 		margin: 20px;
+	}
+	
+	.project {
+		width: 30%;
 	}
 }
 
