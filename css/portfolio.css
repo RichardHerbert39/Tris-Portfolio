@@ -89,6 +89,12 @@ nav ul {
 	z-index: -1;
 }
 
+.flex {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-around;
+}
+
 .about-image {
 	max-width: 90%;
 	position: relative;
@@ -99,6 +105,35 @@ nav ul {
 	padding: 10px;
 	color: var(--terminal-green);
 	background-color: var(--terminal-black);
+}
+
+.skill {
+	width: 48%;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.skill-image {
+	max-width: 95%;
+}
+
+.skill-name {
+	font-size: 1.2rem;
+	color: var(--terminal-blue);
+}
+
+.skill-description {
+	display: none;
+	color: var(--terminal-green);	
+}
+
+.project {
+	width: 90%;
+	margin-bottom: 20px;
+}
+
+.project-image {
+	max-width: 100%;
 }
 
 .contact-list {
@@ -112,20 +147,6 @@ nav ul {
 	float: right;
 }
 
-.flex {
-	display: flex;
-	flex-flow: wrap;
-	justify-content: space-around;
-}
-
-.project {
-	width: 90%;
-	margin-bottom: 20px;
-}
-
-.project img {
-	max-width: 100%;
-}
 
 @media (min-width: 768px) {
 	nav {
@@ -179,6 +200,10 @@ nav ul {
 		max-width: 450px;
 		left: 0;
 		margin: 20px;
+	}
+	
+	.skill-description {
+		display: block !important;
 	}
 	
 	.project {
