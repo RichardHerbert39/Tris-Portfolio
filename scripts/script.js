@@ -24,7 +24,7 @@ function typewriter() {
 		if ( iTextPos++ == iArrLength ) {
 			iTextPos = 0;
 			iIndex++;
-			if ( iIndex != aText.length ) {
+			if (iIndex != aText.length) {
 				iArrLength = aText[iIndex].length;
 				setTimeout("typewriter()", 500);
 			}
@@ -55,3 +55,35 @@ function navshow() {
 }
 
 navbutton.addEventListener("click", navshow);
+
+//modal logic for project page
+var projectOne = document.getElementById("project-1"),
+	projectTwo = document.getElementById("project-2"),
+	projectThree = document.getElementById("project-3");
+
+function modalshow(number) {
+	var modalid = "project-modal-" + number,
+		modal = document.getElementById(modalid);
+	modal.style.display = "block";
+	window.addEventListener("click", function() {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	})
+}
+
+if (projectOne != null) {
+	projectOne.addEventListener("click", function() {
+		modalshow(1);
+	})
+}
+if (projectTwo != null) {
+	projectTwo.addEventListener("click", function() {
+		modalshow(2);
+	})
+}
+if (projectThree != null) {
+	projectThree.addEventListener("click", function() {
+		modalshow(3);
+	})
+}
