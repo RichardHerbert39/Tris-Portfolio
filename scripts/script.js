@@ -102,8 +102,6 @@ function enlarge(number) {
 	}
 }
 
-
-
 //modal logic for projects page
 var projectOne = document.getElementById("project-1"),
 	projectTwo = document.getElementById("project-2"),

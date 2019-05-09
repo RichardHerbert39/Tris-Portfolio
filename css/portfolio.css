@@ -170,6 +170,12 @@ nav ul {
 	text-align: center;
 }
 
+.modal-image {
+	max-width: 100%;
+	border: 3px solid var(--terminal-red);
+	box-shadow: 0 10px 10px 20px var(--terminal-black);
+}
+
 .project-title {
 	color: var(--terminal-blue);
 }
