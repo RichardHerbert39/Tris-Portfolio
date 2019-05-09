@@ -147,6 +147,7 @@ nav ul {
 .project {
 	width: 90%;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 .project-image {
@@ -277,10 +278,6 @@ nav ul {
 	.skill-description {
 		display: block !important;
 	}
-	
-	.project {
-		width: 30%;
-	}
 }
 
 @media (min-width: 1125px) {
@@ -290,6 +287,10 @@ nav ul {
 	
 	.skill {
 		width: 24%;
+	}
+	
+	.project {
+		width: 30%;
 	}
 	
 	@keyframes enlarge {
