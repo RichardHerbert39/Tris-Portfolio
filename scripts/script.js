@@ -56,14 +56,52 @@ function navshow() {
 
 navbutton.addEventListener("click", navshow);
 
-//modal logic for project page
+//enlarge logic for skills page
+var skillArray = [],
+	descArray = [];
+
+for (var i = 1; i < 100 && document.getElementById("skill-" + i) != null; i++) {
+	var currentSkill = document.getElementById("skill-" + i),
+		currentDesc = document.getElementById("skill-desc-" + i);
+	skillArray.push(currentSkill);
+	descArray.push(currentDesc);
+	function addEvent(number) {
+		currentSkill.addEventListener("click", function() {
+			enlarge(number);
+		});
+	}
+
+	addEvent(i - 1);
+}
+
+function enlarge(number) {
+	var skill = skillArray[number],
+		description = descArray[number];
+	description.style.display = "block";
+	skill.style.animation = "enlarge 1s forwards";
+	setTimeout(function() {
+		window.addEventListener("click", function() {
+			shrink(skill, description)
+		})
+	}, 1000);
+}
+
+function shrink(skill, description) {
+	skill.style.animation = "shrink 1s forwards";
+	setTimeout(function() {
+		description.style.display = "none"
+	}, 1000);
+	window.removeEventListener("click", shrink);
+}
+
+
+//modal logic for projects page
 var projectOne = document.getElementById("project-1"),
 	projectTwo = document.getElementById("project-2"),
 	projectThree = document.getElementById("project-3");
 
 function modalshow(number) {
-	var modalid = "project-modal-" + number,
-		modal = document.getElementById(modalid);
+	var modal = document.getElementById("project-modal-" + number);
 	modal.style.display = "block";
 	window.addEventListener("click", function() {
 		if (event.target == modal) {
@@ -75,15 +113,15 @@ function modalshow(number) {
 if (projectOne != null) {
 	projectOne.addEventListener("click", function() {
 		modalshow(1);
-	})
+	});
 }
 if (projectTwo != null) {
 	projectTwo.addEventListener("click", function() {
 		modalshow(2);
-	})
+	});
 }
 if (projectThree != null) {
 	projectThree.addEventListener("click", function() {
 		modalshow(3);
-	})
+	});
 }

@@ -92,6 +92,13 @@ nav ul {
 .flex {
 	display: flex;
 	flex-flow: wrap;
+}
+
+.space-between {
+	justify-content: space-between;	
+}
+
+.space-around {
 	justify-content: space-around;
 }
 
@@ -125,6 +132,16 @@ nav ul {
 .skill-description {
 	display: none;
 	color: var(--terminal-green);	
+}
+
+@keyframes enlarge {
+	from {width: 48%;}
+	to {width: 100%;}
+}
+
+@keyframes shrink {
+	from {width: 100%;}
+	to {width: 48%;}
 }
 
 .project {
@@ -263,5 +280,19 @@ nav ul {
 @media (min-width: 1125px) {
 	.about-image {
 		max-width: 50%;
+	}
+	
+	.skill {
+		width: 24%;
+	}
+	
+	@keyframes enlarge {
+		from {width: 24%;}
+		to {width: 100%;}
+	}
+	
+	@keyframes shrink {
+		from {width: 100%;}
+		to {width: 24%;}
 	}
 }
