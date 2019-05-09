@@ -108,10 +108,11 @@ var projectOne = document.getElementById("project-1"),
 	projectThree = document.getElementById("project-3");
 
 function modalshow(number) {
-	var modal = document.getElementById("project-modal-" + number);
+	var modal = document.getElementById("project-modal-" + number),
+		close = document.getElementsByClassName("modal-close")[number - 1];
 	modal.style.display = "block";
 	window.addEventListener("click", function() {
-		if (event.target == modal) {
+		if (event.target == modal || event.target == close) {
 			modal.style.display = "none";
 		}
 	})
