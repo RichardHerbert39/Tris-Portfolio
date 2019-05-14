@@ -144,7 +144,7 @@ nav ul {
 	to {width: 48%;}
 }
 
-.skill, .project {
+.skill, .project, .modal-close {
 	cursor: pointer;
 }
 
