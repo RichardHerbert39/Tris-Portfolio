@@ -69,7 +69,7 @@ function navclick(page) {
 		else if (page == "projects") {
 			projectstart();
 		}
-	}, 100);
+	}, 250);
 }
 
 navbutton.addEventListener("click", navshow);
