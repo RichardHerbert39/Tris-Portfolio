@@ -144,6 +144,10 @@ nav ul {
 	to {width: 48%;}
 }
 
+.skill, .project {
+	cursor: pointer;
+}
+
 .project {
 	width: 90%;
 	margin-bottom: 20px;
